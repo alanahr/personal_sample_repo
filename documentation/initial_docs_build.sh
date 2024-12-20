@@ -1,4 +1,5 @@
 #!/bin/bash
+# todo - lots of updates needed
 
 set -e
 
@@ -13,8 +14,8 @@ NC='\033[0m' # No Color
 SCRIPT_DIR=$( cd -- "$( dirname -- "${BASH_SOURCE[0]}" )" &> /dev/null && pwd )
 HOME_DIR=`dirname $SCRIPT_DIR`
 LOG_DIR="${SCRIPT_DIR}"
-PY_LIB="python3.10"
-PIP_LIB="pip3.10"
+PY_LIB="python3.10" #TODO - move this to env/config
+PIP_LIB="pip3.10" #TODO - move this to env/config
 
 ## not used
 function check_cmd {
@@ -46,6 +47,7 @@ function echo_warning {
 ######
 
 echo_info "Step 1: checking for python"
+#todo - there's a better way to check for this... find the right command...
 if ! command -v $PY_LIB &> /dev/null
 then
     echo_error " could not be found"
