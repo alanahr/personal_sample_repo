@@ -12,7 +12,22 @@ The old repo had so many features, like...
 
 And all this required the usage of a _lot_ of libraries like like SQLAlchemy, requests, nltk, plotly (for visualization), selenium, ssh + paramiko, networkx, beautiful soup, pandas, numpy, celery, and the like. It got out of hand. I also had some jupyter notebooks in there, sphinx docs, some terraform, etc... 
 
-## Features
+
+## Tool Features
+### Manage a generic set of "entries" with multiple relationships
+I want to manage generic goals along with implementation and measurements (e.g., SMART goals, goals > habits/tasks with due date, etc.)
+
+### Quill/CKEditor WYSIWYG editor for daily ad hoc notes, auto tagging with related entries, notes, and sentiments, and multiple document layouts
+One of the biggest things I want to do is write notes, but instead of having to navigate to individual documents/parents, I want to be able to start with a parent document, and then reassign those blocks as needed later.
+Secondly, one of the things with keeping a journal is remembering how things actually were in the moment as over time we tend to forget how we actually felt and nostalgia makes us remember things better than they actually were. I want to track my sentiments as I go though when I wrote notes I tend to write sentiment-related words as I go. I also think there's a big opportunity here for context-aware suggestions (e.g., relations to entries/goals, adding tasks, maybe even auto topic detection. We'll see how far I get, though.
+
+
+### Forms, Duplicate Detection, and Smart Typeahead/Autocomplete
+One of the main features lacking from any tool out there is just a simple typeahead/autocomplete showing existing items and the ability to *remember* past items entered and automatically categorize them or tag them like previously entered ones.
+
+I also want to make smart forms without paying extra (e.g., if I select A from dropdown one, dropdown two automatically shows X, Y, and Z.
+
+## Implementation Features
 ### Build/Deploy/CI/CD, etc.
 Things I'm planning on using are Docker (still) but moving to GitHub for CI/CD.
 
@@ -70,5 +85,3 @@ Design is guided (loosely) by the [12 factor principles](https://12factor.net/) 
 
 
 ## Structure
-
-## 
