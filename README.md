@@ -5,6 +5,8 @@ This is an updated version of a project I've been working on for *years*. Any ti
 
 ### The old repo
 The old repo had so many features, like...
+- (Home) inventory management (basic CRUD stuff)
+- File ingestion/exploration/reformatting
 - Spotify API interactions
 - SMS parsing, sentiment analysis, etc.
 - Exercise/workout management
