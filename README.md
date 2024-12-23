@@ -23,7 +23,9 @@ I also tend to keep track of a lot of personal projects, chores, maintenance tas
 
 ### Quill/CKEditor WYSIWYG editor for daily ad hoc notes, auto tagging with related entries, notes, and sentiments, and multiple document layouts
 One of the biggest things I want to do is write notes, but instead of having to navigate to individual documents/parents, I want to be able to start with a parent document, and then reassign those blocks as needed later.
-Secondly, one of the things with keeping a journal is remembering how things actually were in the moment as over time we tend to forget how we actually felt and nostalgia makes us remember things better than they actually were. I want to track my sentiments as I go though when I wrote notes I tend to write sentiment-related words as I go. I also think there's a big opportunity here for context-aware suggestions (e.g., relations to entries/goals, adding tasks, maybe even auto topic detection. We'll see how far I get, though.
+Secondly, one of the things with keeping a journal is remembering how things actually were in the moment as over time we tend to forget how we actually felt and nostalgia makes us remember things better than they actually were. I want to track my sentiments as I go though when I wrote notes I tend to write sentiment-related words as I go. For instance, say I bought a pair of shoes for running, and each time I wear them, I remember how much I don't like running in them; however, because they're still new, I keep thinking I should run in them and maybe they aren't that bad. While most people would just _remember_ this stuff, I need reminders (because hey, after all--they're new shoes and they _should_ be fine.)
+
+I also think there's a big opportunity here for context-aware suggestions (e.g., relations to entries/goals, adding tasks, maybe even auto topic detection. We'll see how far I get, though.
 
 
 ### Forms, Duplicate Detection, and Smart Typeahead/Autocomplete
