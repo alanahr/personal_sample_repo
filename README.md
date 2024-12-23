@@ -17,6 +17,8 @@ And all this required the usage of a _lot_ of libraries like like SQLAlchemy, re
 ### Manage a generic set of "entries" with multiple relationships
 I want to manage generic goals along with implementation and measurements (e.g., SMART goals, goals > habits/tasks with due date, etc.)
 
+I also tend to keep track of a lot of personal projects, chores, maintenance tasks, lists, etc., and sometimes these things are related or one can be dependent on another (e.g., if I have a task to caulk and I'm out of caulk, I need to make sure that buying caulk is on a list and it's appropriately assigned to a home improvement store list).
+
 ### Quill/CKEditor WYSIWYG editor for daily ad hoc notes, auto tagging with related entries, notes, and sentiments, and multiple document layouts
 One of the biggest things I want to do is write notes, but instead of having to navigate to individual documents/parents, I want to be able to start with a parent document, and then reassign those blocks as needed later.
 Secondly, one of the things with keeping a journal is remembering how things actually were in the moment as over time we tend to forget how we actually felt and nostalgia makes us remember things better than they actually were. I want to track my sentiments as I go though when I wrote notes I tend to write sentiment-related words as I go. I also think there's a big opportunity here for context-aware suggestions (e.g., relations to entries/goals, adding tasks, maybe even auto topic detection. We'll see how far I get, though.
@@ -26,6 +28,8 @@ Secondly, one of the things with keeping a journal is remembering how things act
 One of the main features lacking from any tool out there is just a simple typeahead/autocomplete showing existing items and the ability to *remember* past items entered and automatically categorize them or tag them like previously entered ones.
 
 I also want to make smart forms without paying extra (e.g., if I select A from dropdown one, dropdown two automatically shows X, Y, and Z.
+
+There are a lot of instances in which I write down the same stuff over and over on a shopping list, however, some stuff tends to need to go to the top of the list when I notice it (e.g., soap), while other stuff can be a monthly/future sort of thing. The same thing applies to chores/tasks. 
 
 ## Implementation Features
 ### Build/Deploy/CI/CD, etc.
