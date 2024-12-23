@@ -93,3 +93,6 @@ Design is guided (loosely) by the [12 factor principles](https://12factor.net/) 
 
 
 ## Structure
+### Data/Schema
+#### Entries?
+#### Tags/Metadata
