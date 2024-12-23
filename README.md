@@ -16,6 +16,9 @@ The old repo had so many features, like...
 And all this required the usage of a _lot_ of libraries like rrule (and pytz and other calendar/time-related libraries), SQLAlchemy, requests, nltk (for text analysis), plotly (for visualization), selenium (for browser automation/testing), ssh + paramiko (for connecting to external resources, tunnels, etc.), networkx (for graphs), beautiful soup (for saving/parsing html), pandas + numpy and related for working with various data formats, grouping, etc., celery for long-running/async jobs, etc. It got out of hand. I also worked with .json, .txt, .xml, .csv, and .xlsx files amongst others. I also had some jupyter notebooks in there, sphinx docs, some terraform, etc. In addition, database migration started being a big thing.
 
 ## Tool Features
+### Heavy on Visual Features (and performance on e-ink screens)
+...
+
 ### Manage a generic set of "entries" with multiple relationships
 I want to manage generic goals along with implementation and measurements (e.g., SMART goals, goals > habits/tasks with due date, etc.)
 
