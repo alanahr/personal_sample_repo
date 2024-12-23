@@ -17,7 +17,7 @@ And all this required the usage of a _lot_ of libraries like like SQLAlchemy, re
 ### Manage a generic set of "entries" with multiple relationships
 I want to manage generic goals along with implementation and measurements (e.g., SMART goals, goals > habits/tasks with due date, etc.)
 
-I also tend to keep track of a lot of personal projects, chores, maintenance tasks, lists, etc., and sometimes these things are related or one can be dependent on another (e.g., if I have a task to caulk and I'm out of caulk, I need to make sure that buying caulk is on a list and it's appropriately assigned to a home improvement store list).
+I also tend to keep track of a lot of personal projects, chores, maintenance tasks, lists, etc., and sometimes these things are related or one can be dependent on another. For example, if I have a task to caulk and I'm out of caulk, I need to make sure that buying caulk is on a list *first* (and the task depends on that being completed first) and it's appropriately assigned to a home improvement store shopping list).
 
 ### Quill/CKEditor WYSIWYG editor for daily ad hoc notes, auto tagging with related entries, notes, and sentiments, and multiple document layouts
 One of the biggest things I want to do is write notes, but instead of having to navigate to individual documents/parents, I want to be able to start with a parent document, and then reassign those blocks as needed later.
