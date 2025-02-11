@@ -1,4 +1,16 @@
 services:
+  backend:
+    build: ./services/server
+    ports:
+      - "8080:8080"
+    env_file:
+      - .env
+    volumes:
+      - ./services/server/app:/app/app
+    networks:
+    - mongodb_network
+    depends_on:
+    - mongodb
   mongodb:
     image: mongo:latest
     container_name: mongodb
