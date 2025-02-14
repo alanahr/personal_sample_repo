@@ -26,7 +26,13 @@ If using cloud solutions, find solution with most straightforward billing (if ev
 
 ## Implementation Features
 ### Build/Deploy/CI/CD, etc.
-Things I'm planning on using are Docker (still) but moving to GitHub for CI/CD, perhaps [GKE](https://console.cloud.google.com/kubernetes)
+Docker
+npm
+Github CI/CD
+[GKE](https://console.cloud.google.com/kubernetes)?
+
+### Async, queue, cache
+Use Redis, Celery
 
 ### Jupyter notebooks
 Make part of app or just make sure to put detailed py notes into the repo
