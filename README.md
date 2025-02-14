@@ -37,16 +37,17 @@ Github CI/CD
 
 ### Async, queue, cache
 Use Redis, Celery
+Using [pymongo+motor](https://www.mongodb.com/docs/languages/python/pymongo-driver/current/pymongo-to-async-guide/) all-in-one (assumption - personal usage only so not production) 
 
 ### Jupyter notebooks
 Make part of app or just make sure to put detailed py notes into the repo
 
-### Async
-Using [pymongo+motor](https://www.mongodb.com/docs/languages/python/pymongo-driver/current/pymongo-to-async-guide/) all-in-one (assumption - personal usage only so not production) 
-
 ### UI
 I was using Jinja and writing a lot of js as I went, so this time I'm going to move to Vue + Vite
 As for UI libraries, I don't actually like customizing CSS a whole lot but would like the option to but still have a variety of UI components available, thus [primevue with tailwind](https://tailwind.primevue.org/b) seems like a good option.
+
+### Visualization
+d3, plotly?
 
 ### Server
 Python, FastAPI (+ OpenAPI), Uvicorn
