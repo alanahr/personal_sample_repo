@@ -109,6 +109,8 @@ Design is guided (loosely) by the [12 factor principles](https://12factor.net/) 
 
 ## Structure
 ### Data/Schema
+Goal is fairly flexible schema as it's just for personal use but notes for mongodb: will never likely have squillions
+
 #### Entries?
 #### Tags/Metadata
 
