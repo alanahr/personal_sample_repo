@@ -91,7 +91,8 @@ Design is guided (loosely) by the [12 factor principles](https://12factor.net/) 
   * handle signals gracefully, e.g., via systemd, or individual processes like via Gunicorn as [documented here](https://docs.gunicorn.org/en/stable/signals.html).
 10. dev/prod parity - they should not be wildly different
 11. logs as event streams - the app should not attempt to write to or manage logfiles; instead, each running process writes its event stream, unbuffered, to stdout
-  * configure root logging 
+  * configure root logging and logging for services
+  * [] TODO set the logging configuration up FIRST 
   * treat logs as event streams and send to centralized location via logging service
 12. running admin/management tasks as one-off processes, e.g., running database migrations (e.g. manage.py migrate)
 13. [OpenAPI spec-compliant](https://swagger.io/specification/) and clear and thoughtful API design - *it should describe the what and not the how*
