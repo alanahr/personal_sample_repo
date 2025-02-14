@@ -21,6 +21,9 @@ see [link for example](https://www.mongodb.com/developer/products/atlas/building
 ### Visual-based, compact layout
 Using tailwind or similar to customize layout as modern website layouts seem to be designed for mobile with too much space--goal is a productivity focused app with max data shown
 
+### Easy Billing Overview/Control
+If using cloud solutions, find solution with most straightforward billing (if even possible)
+
 ## Implementation Features
 ### Build/Deploy/CI/CD, etc.
 Things I'm planning on using are Docker (still) but moving to GitHub for CI/CD, perhaps [GKE](https://console.cloud.google.com/kubernetes)
