@@ -4,6 +4,7 @@
 This is an updated version of a project I've been working on for years. I've made multiple versions using a variety of frameworks (from Java, Spring, and PostgreSQL to Flask, MySQL, Jinja and plain ol' Javascript to this newest async incarnation using FastAPI, MongoDB, Vue + Vite).
 
 ## Goals & Tool Features
+This section is more a brain dump for the basic things that might set this apart from other solutions out there.
 
 ### Graph-type data for flexible relationships
 Manage a generic set of "entries" with multiple relationships using graph (mongo) db
@@ -12,8 +13,9 @@ Manage a generic set of "entries" with multiple relationships using graph (mongo
 Single doc and multi-page doc editing with tagging and mentions for contextual actions
 NLTK, gensim, etc., to do topic identification, pull out keywords for more freeform notes
 
-### Forms, Duplicate Detection, and Smart Typeahead/Autocomplete
-Forms with typeahead/autocomplete and smart matching based on form; "fuzzy" and similar word matching might require llm usage; 
+### Schema validation, Forms, Duplicate Detection, and Smart Typeahead/Autocomplete
+Use Pydantic
+Forms with typeahead/autocomplete and smart matching based on form; "fuzzy" and similar word matching might require llm usage ; 
 see [link for example](https://www.mongodb.com/developer/products/atlas/building-generative-ai-applications-vector-search-open-source-models/)
 
 ### Visual-based, compact layout
@@ -21,19 +23,25 @@ Using tailwind or similar to customize layout as modern website layouts seem to 
 
 ## Implementation Features
 ### Build/Deploy/CI/CD, etc.
-Things I'm planning on using are Docker (still) but moving to GitHub for CI/CD.
+Things I'm planning on using are Docker (still) but moving to GitHub for CI/CD, perhaps [GKE](https://console.cloud.google.com/kubernetes)
+
+### Jupyter notebooks
+Make part of app or just make sure to put detailed py notes into the repo
+
+### Async
+Using [pymongo+motor](https://www.mongodb.com/docs/languages/python/pymongo-driver/current/pymongo-to-async-guide/) all-in-one (assumption - personal usage only so not production) 
 
 ### UI
-I was using Jinja and writing a lot of js as I went, so this time I'm going to move to Vue + Vite (and PrimeVue, Apollo, etc.)
+I was using Jinja and writing a lot of js as I went, so this time I'm going to move to Vue + Vite
+As for UI libraries, I don't actually like customizing CSS a whole lot but would like the option to but still have a variety of UI components available, thus [primevue with tailwind](https://tailwind.primevue.org/b) seems like a good option.
 
-### Server - python
-Python
-FastAPI (+ OpenAPI)
+### Server
+Python, FastAPI (+ OpenAPI), Uvicorn
 [Async pymongo+motor](https://www.mongodb.com/docs/languages/python/pymongo-driver/current/connect/mongoclient/)
 Still thinking about a separate Flask+Jinja server and a dedicated API server, but we'll see.
 
 ### Data storage - mongodb
-MongoDB for flexible structure
+MongoDB for flexible structure 
 for more graph intensive things, might use networkx and possibly a separate db?
 Static files or gridfs for whole documents (e.g., PDFs, images)
 
