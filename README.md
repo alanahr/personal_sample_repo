@@ -1,7 +1,7 @@
 # Sample Repo/Personal Project
 
 ## Intro
-This is an updated version of a project I've been working on for *years*. Any time I had an idea, I just threw it in without worrying about it being perfect, thus it's not public. However, after years of working on it, I want to start fresh and pare it down to the things that are a) (still) important, and b) things that aren't possible with an already existing solution *or* things that are possible but I'd have to pay so it'd be worth it to self-host.
+This is an updated version of a project I've been working on for years. I've made multiple versions using a variety of frameworks (from Java and Spring to this newest incarnation).
 
 ### The old repo
 The old repo had so many features, like...
