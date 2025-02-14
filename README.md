@@ -1,7 +1,7 @@
 # Sample Repo/Personal Project
 
 ## Intro
-This is an updated version of a project I've been working on for years. I've made multiple versions using a variety of frameworks (from Java, Spring, and PostgreSQL to Flask, MySQL (with SQLAlchemy), Jinja + plain ol' Javascript to this newest async incarnation using FastAPI, MongoDB, Vue + Vite).
+This is an updated version of a project I've been working on for years. I've made multiple versions using a variety of frameworks (from Java, Spring, and PostgreSQL to Flask, MySQL, Jinja and plain ol' Javascript to this newest async incarnation using FastAPI, MongoDB, Vue + Vite).
 
 ### The old repo
 The old repo had so many features, like...
