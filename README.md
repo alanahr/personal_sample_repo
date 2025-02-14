@@ -25,7 +25,10 @@ see [link for example](https://www.mongodb.com/developer/products/atlas/building
 ### Visual-based, compact layout
 Using tailwind or similar to customize layout as modern website layouts seem to be designed for mobile with too much space--goal is a productivity focused app with max data shown
 
-### Easy Billing Overview/Control
+### Data Lake
+Functionality for raw source data uploads
+
+### Simplified Billing Overview/Control??
 If using cloud solutions, find solution with most straightforward billing (if even possible)
 
 ## Implementation Features
