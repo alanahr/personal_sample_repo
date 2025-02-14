@@ -6,6 +6,10 @@ This is an updated version of a project I've been working on for years. I've mad
 ## Goals & Tool Features
 This section is more a brain dump for the basic things that might set this apart from other solutions out there.
 
+### Documentation
+Especially brain dump, notes as you go along
+Methods should use doctest
+
 ### Graph-type data for flexible relationships
 Manage a generic set of "entries" with multiple relationships using graph (mongo) db
 
