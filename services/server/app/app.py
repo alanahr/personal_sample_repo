@@ -115,6 +115,15 @@ async def create_note(note: NoteModel = Body(...)):
     return created_note
 
 
+@router.get("/health", response_description="Health endpoint", response_model=Response)
+def get_health():
+    return {
+        "status_code": 200,
+        "response_type": "success",
+        "description": "connected",
+        "data": ["connected to backend"],
+    }
+
 @app.get(
     "/notes/",
     response_description="List all notes",
