@@ -1,58 +1,69 @@
 # Sample Repo/Personal Project
 
 ## Intro
-This is an updated version of a project I've been working on for *years*. Any time I had an idea, I just threw it in without worrying about it being perfect, thus it's not public. However, after years of working on it, I want to start fresh and pare it down to the things that are a) (still) important, and b) things that aren't possible with an already existing solution *or* things that are possible but I'd have to pay so it'd be worth it to self-host.
+This is an updated version of a project I've been working on for years. I've made multiple versions using a variety of frameworks (from Java, Spring, and PostgreSQL to Flask, MySQL, Jinja and plain ol' Javascript to this newest async incarnation using FastAPI, MongoDB, Vue + Vite).
 
-### The old repo
-The old repo had so many features, like...
-- (Home) inventory management (basic CRUD stuff)
-- File ingestion/exploration/reformatting
-- Spotify API interactions
-- SMS parsing, sentiment analysis, etc. (from .xml)
-- Exercise/workout management (CRUD operations for all, exercises with alternate names and related exercises, and then workout management with time- or count-based sets)
-- *Very* basic Garmin/workout file ingestion & display (.tcx and .xml)
-- and more...
+## Goals & Tool Features
+This section is more a brain dump for the basic things that might set this apart from other solutions out there.
 
-And all this required the usage of a _lot_ of libraries like rrule (and pytz and other calendar/time-related libraries), SQLAlchemy, requests, nltk (for text analysis), plotly (for visualization), selenium (for browser automation/testing), ssh + paramiko (for connecting to external resources, tunnels, etc.), networkx (for graphs), beautiful soup (for saving/parsing html), pandas + numpy and related for working with various data formats, grouping, etc., celery for long-running/async jobs, etc. It got out of hand. I also worked with .json, .txt, .xml, .csv, and .xlsx files amongst others. I also had some jupyter notebooks in there, sphinx docs, some terraform, etc. In addition, database migration started being a big thing.
+### Documentation
+Especially brain dump, notes as you go along
+Methods should use doctest
 
-## Tool Features
-### Heavy on Visual Features (and performance on e-ink screens)
-...
+### Graph-type data for flexible relationships
+Manage a generic set of "entries" with multiple relationships using graph (mongo) db
 
-### Manage a generic set of "entries" with multiple relationships
-I want to manage generic goals along with implementation and measurements (e.g., SMART goals, goals > habits/tasks with due date, etc.)
+### WYSIWYG editor for editing single docs and also ability to edit whole documents with chapters, etc.
+Single doc and multi-page doc editing with tagging and mentions for contextual actions
+NLTK, gensim, etc., to do topic identification, pull out keywords for more freeform notes
 
-I also tend to keep track of a lot of personal projects, chores, maintenance tasks, lists, etc., and sometimes these things are related or one can be dependent on another. For example, if I have a task to caulk and I'm out of caulk, I need to make sure that buying caulk is on a list *first* (and the task depends on that being completed first) and it's appropriately assigned to a home improvement store shopping list).
+### Schema validation, Forms, Duplicate Detection, and Smart Typeahead/Autocomplete
+Use Pydantic
+Forms with typeahead/autocomplete and smart matching based on form; "fuzzy" and similar word matching might require llm usage ; 
+see [link for example](https://www.mongodb.com/developer/products/atlas/building-generative-ai-applications-vector-search-open-source-models/)
 
-### Quill/CKEditor WYSIWYG editor for daily ad hoc notes, auto tagging with related entries, notes, and sentiments, and multiple document layouts
-One of the biggest things I want to do is write notes, but instead of having to navigate to individual documents/parents, I want to be able to start with a parent document, and then reassign those blocks as needed later.
-Secondly, one of the things with keeping a journal is remembering how things actually were in the moment as over time we tend to forget how we actually felt and nostalgia makes us remember things better than they actually were. I want to track my sentiments as I go though when I wrote notes I tend to write sentiment-related words as I go. For instance, say I bought a pair of shoes for running, and each time I wear them, I remember how much I don't like running in them; however, because they're still new, I keep thinking I should run in them and maybe they aren't that bad. While most people would just _remember_ this stuff, I need reminders (because hey, after all--they're new shoes and they _should_ be fine.)
+### Visual-based, compact layout
+Using tailwind or similar to customize layout as modern website layouts seem to be designed for mobile with too much space--goal is a productivity focused app with max data shown
 
-I also think there's a big opportunity here for context-aware suggestions (e.g., relations to entries/goals, adding tasks, maybe even auto topic detection. We'll see how far I get, though.
+### Data Lake
+Functionality for raw source data uploads
 
-
-### Forms, Duplicate Detection, and Smart Typeahead/Autocomplete
-One of the main features lacking from any tool out there is just a simple typeahead/autocomplete showing existing items and the ability to *remember* past items entered and automatically categorize them or tag them like previously entered ones.
-
-I also want to make smart forms without paying extra (e.g., if I select A from dropdown one, dropdown two automatically shows X, Y, and Z.
-
-There are a lot of instances in which I write down the same stuff over and over on a shopping list, however, some stuff tends to need to go to the top of the list when I notice it (e.g., soap), while other stuff can be a monthly/future sort of thing. The same thing applies to chores/tasks. 
+### Simplified Billing Overview/Control??
+If using cloud solutions, find solution with most straightforward billing (if even possible)
 
 ## Implementation Features
 ### Build/Deploy/CI/CD, etc.
-Things I'm planning on using are Docker (still) but moving to GitHub for CI/CD.
+Docker
+npm
+Github CI/CD
+[GKE](https://console.cloud.google.com/kubernetes)?
+
+### Async, queue, cache
+Use Redis, Celery
+Using [pymongo+motor](https://www.mongodb.com/docs/languages/python/pymongo-driver/current/pymongo-to-async-guide/) all-in-one (assumption - personal usage only so not production) 
+
+### Jupyter notebooks
+Make part of app or just make sure to put detailed py notes into the repo
 
 ### UI
-I was using Jinja and writing a lot of js as I went, so this time I'm going to move to Vue + Vite (and PrimeVue, Apollo, etc.)
+I was using Jinja and writing a lot of js as I went, so this time I'm going to move to Vue + Vite
+As for UI libraries, I don't actually like customizing CSS a whole lot but would like the option to but still have a variety of UI components available, thus [primevue with tailwind](https://tailwind.primevue.org/b) seems like a good option.
+
+### Visualization
+d3, plotly?
 
 ### Server
+Python, FastAPI (+ OpenAPI), Uvicorn
+[Async pymongo+motor](https://www.mongodb.com/docs/languages/python/pymongo-driver/current/connect/mongoclient/)
 Still thinking about a separate Flask+Jinja server and a dedicated API server, but we'll see.
 
-### Data storage
-I've used mostly MySQL and PostgreSQL, but given the complicated structures I end up creating, I'm planning on moving to MongoDB.
+### Data storage - mongodb
+MongoDB for flexible structure 
+for more graph intensive things, might use networkx and possibly a separate db?
+Static files or gridfs for whole documents (e.g., PDFs, images)
 
 ## Guiding Principles
-☐ clean  up this section
+
 Design is guided (loosely) by the [12 factor principles](https://12factor.net/) and the [EKS workshop version](https://developers.eksworkshop.com/docs/introduction/python/refactoring/) and the [Google version](https://cloud.google.com/architecture/twelve-factor-app-development-on-gcp), etc. <sup>1</sup> + 3 more
 1. **codebase** - One codebase tracked in **revision control**, many deploys
    - ideally within this are requirements and use cases, stories, tests, etc. 
@@ -84,7 +95,8 @@ Design is guided (loosely) by the [12 factor principles](https://12factor.net/) 
   * handle signals gracefully, e.g., via systemd, or individual processes like via Gunicorn as [documented here](https://docs.gunicorn.org/en/stable/signals.html).
 10. dev/prod parity - they should not be wildly different
 11. logs as event streams - the app should not attempt to write to or manage logfiles; instead, each running process writes its event stream, unbuffered, to stdout
-  * configure root logging 
+  * configure root logging and logging for services
+  * [] TODO set the logging configuration up FIRST 
   * treat logs as event streams and send to centralized location via logging service
 12. running admin/management tasks as one-off processes, e.g., running database migrations (e.g. manage.py migrate)
 13. [OpenAPI spec-compliant](https://swagger.io/specification/) and clear and thoughtful API design - *it should describe the what and not the how*
@@ -97,5 +109,19 @@ Design is guided (loosely) by the [12 factor principles](https://12factor.net/) 
 
 ## Structure
 ### Data/Schema
+Goal is fairly flexible schema as it's just for personal use but notes for mongodb: will never likely have squillions
+
 #### Entries?
 #### Tags/Metadata
+
+### The old repo
+The old repo had so many features, like...
+- (Home) inventory management (basic CRUD stuff)
+- File ingestion/exploration/reformatting
+- Spotify API interactions
+- SMS parsing, sentiment analysis, etc. (from .xml)
+- Exercise/workout management (CRUD operations for all, exercises with alternate names and related exercises, and then workout management with time- or count-based sets)
+- *Very* basic Garmin/workout file ingestion & display (.tcx and .xml)
+- and more...
+
+And all this required the usage of a _lot_ of libraries like rrule (and pytz and other calendar/time-related libraries), SQLAlchemy, requests, nltk (for text analysis), plotly (for visualization), selenium (for browser automation/testing), ssh + paramiko (for connecting to external resources, tunnels, etc.), networkx (for graphs), beautiful soup (for saving/parsing html), pandas + numpy and related for working with various data formats, grouping, etc., celery for long-running/async jobs, etc. It got out of hand. I also worked with .json, .txt, .xml, .csv, and .xlsx files amongst others. I also had some jupyter notebooks in there, sphinx docs, some terraform, etc. In addition, database migration started being a big thing.
