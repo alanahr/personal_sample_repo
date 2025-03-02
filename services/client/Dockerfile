@@ -1,8 +1,10 @@
-FROM node:23-alpine
+FROM node:20-alpine
+
+RUN apk add --no-cache libc6-compat
 
 WORKDIR /client
 
-COPY package*.json ./
+COPY package.json yarn.lock* package-lock.json* pnpm-lock.yaml* ./
 
 RUN npm install
 

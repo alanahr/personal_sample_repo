@@ -25,6 +25,11 @@ const router = createRouter({
       // which is lazy-loaded when the route is visited.
       component: () => import('@/components/categories/Index.vue'),
     },
+    {
+      path: '/health',
+      name: 'health',
+      component: () => import('@/components/health/Index.vue'),
+    },
   ],
 })
 

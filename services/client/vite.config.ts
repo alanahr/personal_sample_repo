@@ -8,6 +8,11 @@ import vueDevTools from 'vite-plugin-vue-devtools'
 
 // https://vite.dev/config/
 export default defineConfig({
+  server: {
+    host: '0.0.0.0', // Listen on all network interfaces (required for Docker)
+    port: 5173, // Or your preferred port
+    strictPort: true, // Exit if the port is already in use
+  },
   plugins: [tailwindcss(), vue(), vueJsx(), vueDevTools()],
   resolve: {
     alias: {
