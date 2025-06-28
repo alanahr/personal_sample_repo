@@ -7,6 +7,7 @@ from bson import ObjectId
 
 from fastapi import FastAPI, Body, HTTPException, status
 from fastapi.responses import Response
+from fastapi.middleware.cors import CORSMiddleware
 from pydantic import ConfigDict, BaseModel, Field, BeforeValidator
 from pymongo import ReturnDocument, AsyncMongoClient
 
@@ -16,6 +17,21 @@ app = FastAPI(
     summary="FastAPI ReST API with MongoDB.",
 )
 
+origins = [
+    "http://localhost:5173",
+    "http://0.0.0.0:5173",
+    "http://0.0.0.0",
+    "http://localhost:5173",
+]
+
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=origins,
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
+
 client = AsyncMongoClient(os.environ["MONGODB_URL"])
 db = client.default_db
 note_collection = db.get_collection("default_db_collection")
@@ -23,6 +39,35 @@ note_collection = db.get_collection("default_db_collection")
 # Represents an ObjectId field in the database.
 # It will be represented as a `str` on the model so that it can be serialized to JSON.
 PyObjectId = Annotated[str, BeforeValidator(str)]
+
+
+
+class HealthCheck(BaseModel):
+    """
+    Container for generic text.
+    """
+    response: str = "health check ok"    
+
+ 
+@app.get(
+    "/health",
+    tags=["healthcheck"],
+    summary="Perform a Health Check",
+    response_description="Return HTTP Status Code 200 (OK)",
+    status_code=status.HTTP_200_OK,
+    response_model=HealthCheck,
+)
+def get_health() -> HealthCheck:
+    """
+    ## Perform a Health Check
+    Endpoint to perform a healthcheck on. This endpoint can primarily be used Docker
+    to ensure a robust container orchestration and management is in place. Other
+    services which rely on proper functioning of the API service will not deploy if this
+    endpoint returns any other HTTP status code except 200 (OK).
+    Returns:
+        HealthCheck: Returns a JSON response with the health status
+    """
+    return HealthCheck(status="OK")
 
 
 class NoteModel(BaseModel):
