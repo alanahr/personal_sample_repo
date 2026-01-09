@@ -1,13 +1,15 @@
 # Sample Repo/Personal Project
 
-## Intro
-This is an updated version of a project I've been working on for years. I've made multiple versions using a variety of frameworks (from Java, Spring, and PostgreSQL to Flask, MySQL, Jinja and plain ol' Javascript to this newest async incarnation using FastAPI, MongoDB, Vue + Vite).
+## Introduction
+This is an updated version of a project I've been working on for years (the repos are not public). I regularly rewrite it as a way to learn new frameworks and languages, test out different ways of interacting with data (e.g., structured vs semi-structured data), etc. It is only meant to be run locally as of now.
+
+I've made multiple versions using a variety of frameworks. I started in Java + Spring with MySQL and Angular for the front-end, then I rewrote it using Python (database management/interactions with sqlalchemy), Flask, and Jinja with vanilla JavaScript. I thought hand-rolling JavaScript and TypeScript would be easier than choosing a front-end framework, but for a tool of this size, hand-rolling isn't the best choice. So I moved the front-end to Vue (3). This is the newest async incarnation using FastAPI, MongoDB, Vue + Vite).
 
 ## Goals & Tool Features
 This section is more a brain dump for the basic things that might set this apart from other solutions out there.
 
 ### Documentation
-Especially brain dump, notes as you go along
+
 Methods should use doctest
 
 ### Graph-type data for flexible relationships
