@@ -1,4 +1,5 @@
 # Sample Repo/Personal Project
+> [ ] TODO for myself - clean this file up, use project (for tasks, milestones, etc.) (Feb 2026)
 
 ## Introduction
 This is an updated version of a project I've been working on for years (the repos are not public). I regularly rewrite it as a way to learn new frameworks and languages, test out different ways of interacting with data (e.g., structured vs semi-structured data), etc. It is only meant to be run locally as of now.
@@ -6,11 +7,15 @@ This is an updated version of a project I've been working on for years (the repo
 I've made multiple versions using a variety of frameworks. I started in Java + Spring with MySQL and Angular for the front-end, then I rewrote it using Python (database management/interactions with sqlalchemy), Flask, and Jinja with vanilla JavaScript. I thought hand-rolling JavaScript and TypeScript would be easier than choosing a front-end framework, but for a tool of this size, hand-rolling isn't the best choice. So I moved the front-end to Vue (3). This is the newest async incarnation using FastAPI, MongoDB, Vue + Vite).
 
 ## Goals & Tool Features
-This section is more a brain dump for the basic things that might set this apart from other solutions out there.
+This section/entire file is more a brain dump  in general. I have created projects/stories/etc., in the past, but as one person, might be overkill, so I'm just trying to make sure to dump everything from my brain into this file first.
+
+> [!NOTE]
+> Also, as of 02/12/2026, it seems like I found an actual app/tool that has a lot of what I have been buiding/thinking about (and rebuilding and overthinking): [JournalIt app](https://journalit.app/), so will focus on what that tool doesn't have.
+
 
 ### Documentation
 
-Methods should use doctest
+Methods should use doctest...
 
 ### Graph-type data for flexible relationships
 Manage a generic set of "entries" with multiple relationships using graph (mongo) db
